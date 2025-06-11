@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;900&display=swap');
+@import "tailwindcss";
+
+
+
+@font-face {
+  font-family: 'fc';
+  src: url('./assets/fonts/FIGHTT3_.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'grandmaster';
+  src: url('./assets/fonts/Grandmaster-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kanti';
+  src: url('./assets/fonts/kanit.regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lyons';
+  src: url('./assets/fonts/Lyons Serif.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT';
+  src: url('./assets/fonts/TT Trailers Trial Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@theme{
+    --font-fightclub: fc;
+    --font-barlow: Barlow;
+    --font-kanit: kanit;
+    --font-grandmaster: grandmaster;
+    --font-tt: TT;
+    --font-lyons: lyons;
+    --color-clublightpink : #EC66A4;
+    --color-clubdarkpink : rgb(173, 30, 25);
+    --color-bloodRed: #A32B2B;
+    --animate-infinite-scroll: infinite-scroll 5s linear infinite;
+    @keyframes infinite-scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+    }
+}
+
+:root{
+    background-color: black;
+    color:white;
+}
+
+
+::-webkit-scrollbar {
+  width: 2px; 
+  height: 3px; 
+}
+
+::-webkit-scrollbar-track {
+  background: transparent
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(88, 88, 88); 
+  border-radius: 20px;   
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(88, 88, 88); 
+}
+
