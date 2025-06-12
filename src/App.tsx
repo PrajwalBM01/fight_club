@@ -60,7 +60,7 @@ const App = () => {
         <div className="flex flex-col gap-5 text-xl text-neutral-200">
             And also I have added some background audio to enhance your experience. I would recommend you to continue unmuted.
            <div className="flex justify-end gap-5 px-10 text-sm">
-            <button onClick={()=>{setisLoading(false); setmuted(false)}} className="px-4 py-1 rounded-2xl transition-all duration-250  cursor-pointer hover:text-black hover:bg-neutral-500"> Muted</button>
+            <button onClick={()=>{setisLoading(false); setmuted(false)}} className="px-4 py-1 rounded-2xl transition-all duration-250 text-neutral-500 cursor-pointer hover:text-black hover:bg-neutral-500"> Muted</button>
             <button onClick={()=>{setisLoading(false); setmuted(true)}} className="px-4 py-1 rounded-2xl transition-all duration-250 text-bloodRed cursor-pointer hover:bg-bloodRed hover:text-black"> Unmuted</button>
            </div>
           </div>

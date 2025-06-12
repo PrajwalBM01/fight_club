@@ -1,16 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useMotionValueEvent, useScroll, useTransform } from 'motion/react'
 import useStore from '../store'
-import speach from "../assets/fonts/speach.mp4"
+
 const Story = () => {
   const firstRef = useRef<HTMLDivElement>(null)
   const tylerRef = useRef<HTMLDivElement>(null)
   const endingRef = useRef<HTMLVideoElement>(null)
-  const speachRef = useRef<HTMLVideoElement>(null)
   const horizantalRef = useRef<HTMLDivElement>(null)
-  const lastDivRef = useRef<HTMLDivElement>(null)
   const [isplaying, setisplaying] = useState(true)
-  const [showQuote, setshowQuote] = useState(false)
   const ismute = useStore((state)=>state.ismute)
 
 
@@ -44,22 +41,9 @@ const Story = () => {
     target:horizantalRef
   })
 
-  const {scrollYProgress:lastDiv} = useScroll({
-    target:lastDivRef,
-    offset: ['start end', 'start start']
-  })
-
-  useMotionValueEvent(lastDiv,"change", latest=>{
-    if(speachRef.current){
-      if(latest >= 0.6){
-        speachRef.current.play()
-      }else{
-        speachRef.current.pause()
-      }
-    }
-  })
-
   const shot1text1 = useTransform(horizantalScroll,[0.0,0.25], [200,-200])
+
+
   const reserctedText = useTransform(horizantalScroll,[0.12,0.38],[-100,100])
   const reserctedText2 = useTransform(horizantalScroll,[0.12,0.38],[300,-10])
 
@@ -102,14 +86,10 @@ const Story = () => {
     }
   }))
 
-  useMotionValueEvent(horizantalScroll,'change',(latest)=>{
-    if(latest==1){
-      setshowQuote(true)
-    }else{
-      setshowQuote(false)
-    }
-  })
 
+  useMotionValueEvent(horizantalScroll,"change",latest=>{
+    console.log(latest)
+  })
 
   return (
     <div className='h-auto flex flex-col'>
@@ -129,10 +109,11 @@ const Story = () => {
       </div>
       
       <div ref={horizantalRef} className='h-[400vh] relative'>
-        < motion.div style={{opacity:0,filter:"blur(10px)"}} animate={showQuote?{opacity:1,filter:"blur(0px)"}:{}} className='absolute bottom-0 h-screen w-full flex justify-center items-center'>
-            <h1 className='font-tt text-5xl'>"IT'S ONLY AFTER WE'VE LOST EVERYTHING THAT WE'RE FREE TO DO ANYTHING."</h1>  
-        </motion.div>
-
+        <div className='absolute bottom-0 h-screen w-full border'>
+          <div className='m-20'>
+            gdfgdfg
+          </div>
+        </div>
         <div className='h-screen sticky top-0 flex items-center overflow-hidden'>
           <motion.div style={{x:xTransfrom}} className='flex'>
 
@@ -252,11 +233,7 @@ const Story = () => {
           </motion.div>
         </div>
       </div>
-      <motion.div ref={lastDivRef} className='h-screen w-full  flex items-center justify-center'>
-        <div className='px-10'>
-          <video ref={speachRef} src={speach} loop className=' rounded-3xl'/>
-        </div>
-      </motion.div> 
+      <div className='h-screen w-full cursor-grab active:cursor-grabbing border text-center text-9xl'></div> 
     </div>
   )
 }
