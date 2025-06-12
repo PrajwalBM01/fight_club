@@ -173,7 +173,7 @@ const Story = () => {
                 <motion.h1 style={{x:reserctedText2}} className='text-9xl font-barlow font-bold'>RESURRECTED</motion.h1>
               </div>
               <motion.div  className='text-neutral-500 absolute h-full w-full text-4xl font-barlow font-bold flex flex-col overflow-visible items-center justify-between py-10'>
-                <h1>EVERY EVENING I DEIED. AND EVERY EVENING I WAS BORN AGAIN.</h1>
+                <h1>EVERY EVENING I DIED. AND EVERY EVENING I WAS BORN AGAIN.</h1>
               </motion.div>
               <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635364/reserractedMask_wq2efh.webp' alt="reserecctedMask" className='absolute' />
             </div>
