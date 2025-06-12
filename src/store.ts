@@ -6,6 +6,7 @@ interface FcState {
     ischaropen: boolean
     setismute: () => void
     setischaropen: () => void
+    setmuted: (value:boolean) => void
 }
 
 const useStore = create<FcState>()(
@@ -14,7 +15,8 @@ const useStore = create<FcState>()(
             ismute:false,
             ischaropen:false,
             setischaropen: ()=> set((state)=>({ischaropen: !state.ischaropen})),
-            setismute: ()=> set((state)=>({ismute:!state.ismute}))
+            setismute: ()=> set((state)=>({ismute:!state.ismute})),
+            setmuted:(value)=> set(()=>({ismute:value}))
         }),
         {name:"options",storage: createJSONStorage(() => sessionStorage)}
         

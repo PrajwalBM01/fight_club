@@ -10,11 +10,21 @@ import Tyler from "./pages/chars/Tyler"
 import Narrator from "./pages/chars/Narrator"
 import Marla from "./pages/chars/Marla"
 import { IconDeviceDesktop } from "@tabler/icons-react"
+import loader from "./assets/loader.webp"
+import useStore from "./store"
 
 
 const App = () => {
   const [isopen, setisopen] = useState(false)
   const [Showpopup, setShowpopup] = useState(false)
+  const [isLoading, setisLoading] = useState(false)
+  const setmuted = useStore((state)=>state.setmuted)
+
+  useEffect(()=>{
+    if (!sessionStorage.getItem('loadingScreen')) {
+      setisLoading(true)
+    }
+  },[])
   
   useEffect(()=>{
     const checkScreensize = () =>{
@@ -40,7 +50,37 @@ const App = () => {
     )
   }
 
-  return (
+  
+
+  return isLoading? (
+  <div className="h-screen w-full relative">
+    <img src={loader} alt="" className="absolute bottom-0" />
+    <div className=" h-full w-full z-10 absolute flex justify-center font-barlow font-bold">
+      <div className="w-full flex flex-col items-center m-8 ">
+        <div className="lg:text-2xl text-neutral-200">For the best experience, please switch to full-screen mode by pressing F11 on Windows or the green maximize button on Mac.</div>
+        <div className="flex flex-col gap-5 text-xl text-neutral-200">
+            And also I have added some background audio to enhance your experience. I would recommend you to continue unmuted.
+           <div className="flex justify-end gap-5 px-10 text-sm">
+            <button onClick={()=>{setisLoading(false); setmuted(false)}} className="px-4 py-1 rounded-2xl transition-all duration-250 text-neutral-500 cursor-pointer hover:text-black hover:bg-neutral-500"> Muted</button>
+            <button onClick={()=>{setisLoading(false); setmuted(true)}} className="px-4 py-1 rounded-2xl transition-all duration-250 text-bloodRed cursor-pointer hover:bg-bloodRed hover:text-black"> Unmuted</button>
+           </div>
+          </div>
+      </div>
+    </div>
+    {/* <div className="h-full flex justify-center">
+      <div className="h-full w-4xl p-5 flex flex-col gap-10">
+          <div className="font-barlow font-bold text-3xl">For the best experience, please switch to full-screen mode by pressing F11 on Windows or the green maximize button on Mac.</div>
+          <div className="flex flex-col font-barlow font-bold gap-5">
+            And also added some background audio to enhance your experience. I would recommend you to continue unmuted.
+           <div className="flex justify-end gap-5 px-10">
+            <button className=" p-2 rounded-2xl transition-all duration-250 text-neutral-500 cursor-pointer hover:text-black hover:bg-neutral-500">Continue muted</button>
+            <button className="p-2 rounded-2xl transition-all duration-250 text-bloodRed/70 cursor-pointer hover:bg-bloodRed/70 hover:text-black">Continue unmuted</button>
+           </div>
+          </div>
+      </div>
+    </div> */}
+  </div>
+  ) : (
       <div className="h-auto relative">
         <Navbar 
           isopen={isopen} 
@@ -59,7 +99,7 @@ const App = () => {
         </Routes>
       </main>
       </div>
-  )
-}
+    )
+  }
 
 export default App

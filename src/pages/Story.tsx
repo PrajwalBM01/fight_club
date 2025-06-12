@@ -10,6 +10,7 @@ const Story = () => {
   const [isplaying, setisplaying] = useState(true)
   const ismute = useStore((state)=>state.ismute)
 
+
   useEffect(()=>{
     if(endingRef.current ){
       endingRef.current.muted = !ismute
