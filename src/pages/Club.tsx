@@ -22,12 +22,8 @@ const Club = () => {
   },[ismute])
 
   useMotionValueEvent(scrollY,'change',(current)=>{
-    console.log("current vlaue:",current)
-    console.log("window height:",window.screen.height)
     const audioIndex = Math.floor(current/window.innerHeight)
-    console.log("audioINdex:",audioIndex)
     setcurrentAudio(audioIndex)
-    console.log("currentaudio:", currentAudio)
   })
 
   const audioRolls:string[] = [
@@ -77,10 +73,20 @@ const Club = () => {
 
 
   return (
-    <div 
+    <motion.div
+    initial={{
+      opacity:0,
+      filter:"blur(20px)"
+    }}
+    animate={{
+      opacity:1,
+      filter:"blur(0px)"
+    }}
+    transition={{duration:0.8, ease:'easeOut', delay:0.4} }
       ref={scrollContainerRef}
       className='h-screen w-full overflow-y-scroll snap-y snap-mandatory'
       data-lenis-prevent>
+      <h1 className='top-15 px-5 text-5xl font-tt text-neutral-600 sticky z-10'>{currentAudio==0? '': `RULE ${currentAudio}`}</h1>
       {audioRolls.map((src,idx)=> (
         <audio
           key={idx}
@@ -89,8 +95,8 @@ const Club = () => {
         />
       ))}
 
-      <div className='h-screen snap-start relative font-bold font-barlow'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655296/welcome_xpcyaa.webp' alt="welcome" className='object-cover h-full w-full' />
+      <div className='h-screen snap-start relative font-bold font-barlow flex items-center '>
+        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655296/welcome_xpcyaa.webp' alt="welcome" className='object-cover' />
         <motion.h1
           initial={{x:-800}} 
           animate={currentAudio==0? {x:0}:{x:-800}}
@@ -116,15 +122,14 @@ const Club = () => {
           initial={{opacity:0}} 
           animate={currentAudio ==0? {opacity:1}: {opacity:0}} 
           transition={currentAudio==0?{duration:0.01, delay:3 }:{}} 
-          className='absolute bottom-0 left-10 text-[12rem] z-5 font-fightclub text-bloodRed'
+          className='absolute bottom-0 left-10 text-[12rem] z-5 font-fightclub font-thin text-bloodRed'
         >FIGHT CLUB
         </motion.h1>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655638/welcomeMask_ra9v0i.webp' alt="welcomMusk" className='absolute top-0 object-cover h-full' />
+        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655638/welcomeMask_ra9v0i.webp' alt="welcomMusk" className='absolute' />
       </div>
 
-      <div className='h-screen relative snap-start font-barlow'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655301/1rule_snuiol.webp' alt="rule1" className='object-cover h-full w-full' />
-        <h1 className='absolute top-15 left-5 text-5xl font-tt text-neutral-600'>RULE 1</h1>
+      <div className='h-screen relative snap-start font-barlow flex items-center'>
+        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655301/1rule_snuiol.webp' alt="rule1" className='object-cover' />
         <div className=' absolute flex justify-end top-0 h-full w-full'>
           <div className=' text-end px-10 flex flex-col justify-center'>
           <motion.h1
@@ -173,9 +178,8 @@ const Club = () => {
         </div>
       </div>
 
-      <div className='h-screen relative font-barlow snap-start'>
-      <h1 className='absolute top-15 left-5 text-5xl font-tt text-neutral-600'>RULE 2</h1>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655300/2rule_dgyqa3.webp' alt="rule2" className='object-cover h-full w-full' />  
+      <div className='h-screen relative font-barlow snap-start flex items-center'>
+        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655300/2rule_dgyqa3.webp' alt="rule2" className='object-cover' />  
         <div className=' absolute flex justify-end top-0 h-full w-full'>
           <div className=' text-end px-10 flex flex-col justify-center'>
           <motion.h1
@@ -224,11 +228,10 @@ const Club = () => {
         </div>
       </div>
 
-      <div className='h-screen relative snap-start font-barlow font-bold'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655303/3rule_hg4dy5.webp' alt="rule3" className='object-cover h-full w-full' />
-        <h1 className='absolute top-15 left-5 text-5xl font-tt text-neutral-600'>RULE 3</h1>
+      <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
+        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655303/3rule_hg4dy5.webp' alt="rule3" className='object-cover' />
         <div className='absolute top-0 h-full w-full flex justify-between'>
-          <div className='px-5 pt-40'>
+          <div className='px-5 flex flex-col justify-center'>
           <motion.h1
             initial={{opacity:0,filter:"blur(100px)"}}
             animate={currentAudio==3? {opacity:1,filter:"blur(0px)"}:{opacity:0}}
@@ -282,7 +285,7 @@ const Club = () => {
             initial={{opacity:0,filter:"blur(100px)"}}
             animate={currentAudio==3? {opacity:1,filter:"blur(0px)"}:{opacity:0}}
             transition={currentAudio==3?{duration:0.05 ,delay:5.6}:{}}
-            className='text-7xl font-fightclub text-bloodRed'>FIGHT </motion.h1>
+            className='text-7xl font-fightclub text-bloodRed font-thin'>FIGHT </motion.h1>
           <motion.h1
             initial={{opacity:0,filter:"blur(100px)"}}
             animate={currentAudio==3? {opacity:1,filter:"blur(0px)"}:{opacity:0}}
@@ -298,8 +301,8 @@ const Club = () => {
         
       </div>
 
-      <div className='h-screen relative snap-start font-barlow font-bold'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655293/4rule_asqq8x.webp' alt="rule4" className='object-cover h-full w-full' />
+      <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
+        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655293/4rule_asqq8x.webp' alt="rule4" className='object-cover' />
         <div className=' absolute top-0 h-full w-full flex justify-end items-end'>
           <div className=' w-full h-1/2 flex gap-10 items-center justify-center'>
           <motion.h1
@@ -311,7 +314,7 @@ const Club = () => {
             initial={{opacity:0,filter:"blur(100px)"}}
             animate={currentAudio==4? {opacity:1,filter:"blur(0px)"}:{opacity:0}}
             transition={currentAudio==4?{duration:0.05, delay:1.5}:{}}
-            className='text-[6rem] font-fightclub text-bloodRed'>TWO</motion.h1>
+            className='text-[6rem] font-fightclub text-bloodRed font-thin'>TWO</motion.h1>
           <motion.h1
             initial={{opacity:0,filter:"blur(100px)"}}
             animate={currentAudio==4? {opacity:1,filter:"blur(0px)"}:{opacity:0}}
@@ -326,14 +329,13 @@ const Club = () => {
             initial={{opacity:0,filter:"blur(100px)"}}
             animate={currentAudio==4? {opacity:1,filter:"blur(0px)"}:{opacity:0}}
             transition={currentAudio==4?{duration:0.05, delay:2.3}:{}}
-            className=' text-[6rem] font-fightclub text-bloodRed'>FIGHT</motion.h1>
+            className=' text-[6rem] font-fightclub text-bloodRed font-thin'>FIGHT</motion.h1>
           </div>
         </div>
-        <h1 className='absolute top-15 left-5 text-5xl font-tt text-neutral-600'>RULE 4</h1>
       </div>
 
-      <div className='h-screen relative snap-start font-barlow font-bold'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655297/5rule_dhyu8k.webp' alt="rule5" className='object-cover h-full w-full' />
+      <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
+        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655297/5rule_dhyu8k.webp' alt="rule5" className='object-cover' />
         <div className=' absolute top-0 h-full w-full flex justify-end items-end'>
           <div className=' w-full h-1/2 flex gap-10 items-center justify-center'>
             <motion.h1
@@ -345,7 +347,7 @@ const Club = () => {
               initial={{opacity:0, filter:"blur(20px)"}}
               animate={currentAudio==5?{opacity:1, filter:"blur(0px)"}:{opacity:0}}
               transition={currentAudio==5?{duration:0.05,delay:2.4}:{}}
-              className='text-[6rem] font-fightclub text-bloodRed'>FIGHT</motion.h1>
+              className='text-[6rem] font-fightclub text-bloodRed font-thin'>FIGHT</motion.h1>
             <motion.h1
               initial={{opacity:0, filter:"blur(20px)"}}
               animate={currentAudio==5?{opacity:1, filter:"blur(0px)"}:{opacity:0}}
@@ -368,12 +370,10 @@ const Club = () => {
               className='text-[6rem]'>FELLAS.</motion.h1>
           </div>
         </div>
-        <h1 className='absolute top-15 left-5 text-5xl font-tt text-neutral-600'>RULE 5</h1>
       </div>
 
-      <div className='h-screen relative snap-start font-barlow font-bold'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655294/6rule_nw9i5y.webp' alt="rule6" className='object-cover h-full w-full' />
-        <h1 className='absolute top-15 left-5 text-5xl font-tt text-neutral-600'>RULE 6</h1>
+      <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
+      <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655294/6rule_nw9i5y.webp' alt="rule7" className='object-cover w-full'/>
         <div className=' absolute top-0 h-full w-full flex justify-center items-center'>
           <div className='h-full flex items-center flex-col justify-center'>
             <div className='flex'>
@@ -386,7 +386,7 @@ const Club = () => {
               initial={{opacity:0, filter:"b;ur(50px)"}}
               animate={currentAudio==6? {opacity:1, filter:"blur(0px)"}:{opacity:0}}
               transition={currentAudio==6? {duration:0.05,delay:1.65}:{}}
-              className='text-[6rem] font-fightclub text-bloodRed'>SHIRTS, </motion.h1>
+              className='text-[6rem] font-fightclub text-bloodRed font-thin'>SHIRTS, </motion.h1>
             </div>
             <div className='flex'>
             <motion.h1
@@ -398,15 +398,14 @@ const Club = () => {
               initial={{opacity:0, filter:"b;ur(50px)"}}
               animate={currentAudio==6? {opacity:1, filter:"blur(0px)"}:{opacity:0}}
               transition={currentAudio==6? {duration:0.05,delay:2.4}:{}}
-              className='text-[6rem] font-fightclub text-bloodRed'>SHOES. </motion.h1>
+              className='text-[6rem] font-fightclub text-bloodRed font-thin'>SHOES. </motion.h1>
             </div>
           </div>
         </div>
       </div>
 
-      <div className='h-screen relative snap-start font-barlow font-bold'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655298/7rule_zzwkkt.webp' alt="rule7" className='object-cover h-full w-full'/>  
-        <h1 className='absolute top-15 left-5 text-5xl font-tt text-neutral-600'>RULE 7</h1>
+      <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
+        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655298/7rule_zzwkkt.webp' alt="rule7" className='object-cover'/>  
         <div className='absolute flex justify-end flex-col top-0 h-full w-full'>
           <div className='flex flex-col justify-start px-5 py-5'>
             <div>
@@ -414,7 +413,7 @@ const Club = () => {
               initial={{opacity:0,filter:'blur(100px)'}}
               animate={currentAudio==7? {opacity:1,filter:"blur(0px)"}:{opacity:0}}
               transition={currentAudio==7? {duration:0.05,delay:1.5}:{}}
-              className='text-8xl font-fightclub text-bloodRed'>FIGHTS </motion.h1>
+              className='text-8xl font-fightclub text-bloodRed font-thin'>FIGHTS </motion.h1>
             </div>
             <div className='flex gap-5'>
             <motion.h1
@@ -438,7 +437,7 @@ const Club = () => {
               initial={{opacity:0,filter:'blur(100px)'}}
               animate={currentAudio==7? {opacity:1,filter:"blur(0px)"}:{opacity:0}}
               transition={currentAudio==7? {duration:0.05,delay:2.6}:{}}
-              className='text-8xl font-fightclub text-bloodRed'>LONG</motion.h1>
+              className='text-8xl font-fightclub text-bloodRed font-thin'>LONG</motion.h1>
             <motion.h1
               initial={{opacity:0,filter:'blur(100px)'}}
               animate={currentAudio==7? {opacity:1,filter:"blur(0px)"}:{opacity:0}}
@@ -467,8 +466,8 @@ const Club = () => {
         
       </div>
 
-      <div className='h-screen relative snap-start font-barlow font-bold'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655293/8rule_rl7da5.webp' alt="rule8" className='object-cover h-full w-full' />
+      <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
+        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655293/8rule_rl7da5.webp' alt="rule8" className='object-cover' />
         <div className=' absolute top-0 h-full w-full flex flex-col justify-end items-end'>
           <div className='w-full absolute top-80 flex gap-5 items-center justify-center'>
           <motion.h1
@@ -495,7 +494,7 @@ const Club = () => {
               initial={{opacity:0, filter:"blur(100px)"}}
               animate={currentAudio==8?{opacity:1,filter:"blur(0px)"}:{opacity:0}}
               transition={currentAudio==8?{duration:0.05,delay:3.92}:{}}
-              className='text-[6rem] font-fightclub text-bloodRed'>FIRST</motion.h1>
+              className='text-[6rem] font-fightclub text-bloodRed font-thin'>FIRST</motion.h1>
             <motion.h1
               initial={{opacity:0, filter:"blur(100px)"}}
               animate={currentAudio==8?{opacity:1,filter:"blur(0px)"}:{opacity:0}}
@@ -512,12 +511,12 @@ const Club = () => {
               initial={{opacity:0, filter:"blur(100px)"}}
               animate={currentAudio==8?{opacity:1,filter:"blur(0px)"}:{opacity:0}}
               transition={currentAudio==8?{duration:0.05,delay:4.6}:{}}
-              className='text-[6rem] font-fightclub text-bloodRed'>FIGHT </motion.h1>
+              className='text-[6rem] font-fightclub text-bloodRed font-thin'>FIGHT </motion.h1>
             <motion.h1
               initial={{opacity:0, filter:"blur(100px)"}}
               animate={currentAudio==8?{opacity:1,filter:"blur(0px)"}:{opacity:0}}
               transition={currentAudio==8?{duration:0.05,delay:4.8}:{}}
-              className='text-[6rem] font-fightclub text-bloodRed'>CLUB</motion.h1>
+              className='text-[6rem] font-fightclub text-bloodRed font-thin'>CLUB</motion.h1>
             <motion.h1
               initial={{opacity:0, filter:"blur(100px)"}}
               animate={currentAudio==8?{opacity:1,filter:"blur(0px)"}:{opacity:0}}
@@ -537,14 +536,13 @@ const Club = () => {
               initial={{opacity:0, filter:"blur(100px)"}}
               animate={currentAudio==8?{opacity:1,filter:"blur(0px)"}:{opacity:0}}
               transition={currentAudio==8?{duration:0.05,delay:7.6}:{}}
-              className='text-[6rem] text-bloodRed font-fightclub'>FIGHT</motion.h1>
+              className='text-[6rem] text-bloodRed font-fightclub font-thin'>FIGHT</motion.h1>
           </div>
         </div>
-        <h1 className='absolute top-15 left-5 text-5xl font-tt text-neutral-600'>RULE 8</h1>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655638/8ruleMask_pvsg6e.webp' alt="rule8mask" className='absolute top-0 object-cover h-full' />
+        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655638/8ruleMask_pvsg6e.webp' alt="rule8mask" className='absolute object-cover' />
       </div>
 
-    </div>
+    </motion.div>
   )
 }
 

@@ -86,7 +86,7 @@ const Characters = () => {
       }}
       transition={{duration:0.8, ease:'easeOut'} }
       className='h-screen'>
-      <div className='flex gap-2 h-full w-full pt-15 pb-4 px-5'>
+      <div className='flex gap-2 h-full w-full pt-15 pb-10 px-5'>
         {chars.map((char,idx)=>(
           <motion.div
             key={idx}
