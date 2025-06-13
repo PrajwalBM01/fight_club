@@ -73,7 +73,7 @@ const Navbar = ({
             <motion.div
                 animate={(!isopen && hidden) ? { x: 150 } : { x: 0 }}
                 transition={{ duration: 0.1, type: "tween" }}
-                className='flex md:text-xl lg:text-2xl  transition-all duration-300'>
+                className='flex md:text-2xl lg:text-3xl  transition-all duration-300'>
                 <motion.div
                     transition={{ staggerChildren: 0.2 }}
                     className="w-12 select-none relative hover:cursor-pointer"
