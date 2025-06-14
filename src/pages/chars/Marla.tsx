@@ -29,7 +29,7 @@ const Marla = () => {
     
     <div className='h-auto'>
       <audio 
-        src='https://res.cloudinary.com/df6rtyw66/video/upload/v1749657066/sweetDreams_imcilk.mp3'
+        src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/char-page/marla/sweetDreams.mp3'
         ref={audioRef}
         loop>
 
@@ -41,7 +41,7 @@ const Marla = () => {
         className='h-screen relative flex justify-start items-start'>
         <div className='relative'>
           <div className='absolute  top-0 h-full w-full  bg-linear-to-r from-transparent from-70% to-black'></div>
-          <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749656927/marla_image_vd8nos.webp' alt="" className='h-screen' />
+          <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/char-page/marla/marla_image.webp' alt="" className='h-screen' />
         </div>
           <div className='h-full w-1/2 flex flex-col gap-5 font-barlow  justify-center'>
             <div className='font-bold'>
@@ -56,7 +56,7 @@ const Marla = () => {
             </div>
         </div>
         <img
-          src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749656929/marla_number_nxrcn9.webp' 
+          src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/char-page/marla/marla_number.webp' 
           alt="number" 
           className='absolute h-40 top-0 right-0' />
       </motion.div>

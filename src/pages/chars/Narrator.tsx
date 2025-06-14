@@ -28,7 +28,7 @@ const Narrator = () => {
     <div className='h-auto'>
       <audio 
         ref={audioRef}
-        src='https://res.cloudinary.com/df6rtyw66/video/upload/v1749657139/brokenDreams_kiqcta.mp3'
+        src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/char-page/narrator/brokenDreams.mp3'
         loop></audio>
       <motion.div 
         initial={{opacity:0, filter:"blur(10px)"}}
@@ -37,7 +37,7 @@ const Narrator = () => {
         className='h-screen relative flex justify-start items-start'>
         <div className='relative'>
           <div className='absolute  top-0 h-full w-full  bg-linear-to-r from-transparent from-50% to-black'></div>
-          <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749657129/narratoe_image_q1grvw.webp' alt="narratoeImage" className='h-screen' />
+          <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/char-page/narrator/narratoe_image.webp' alt="narratoeImage" className='h-screen' />
         </div>
           <div className='h-full w-1/2 flex flex-col gap-5 font-barlow justify-center'>
             <div className="font-bold">

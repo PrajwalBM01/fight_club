@@ -28,7 +28,7 @@ const Tyler = () => {
 
   return (
     <div className='h-auto'>
-      <audio src='https://res.cloudinary.com/df6rtyw66/video/upload/v1749657396/guerrillaRadio_b1eayf.mp3' ref={audioRef} loop></audio>
+      <audio src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/char-page/tyler/guerrillaRadio.mp3' ref={audioRef} loop></audio>
       <motion.div
         initial={{opacity:0, filter:"blur(10px)"}}
         animate={{opacity:1, filter:"blur(0px)"}}
@@ -36,7 +36,7 @@ const Tyler = () => {
         className='h-screen relative flex '>
         <div className='relative'>
           <div className='absolute  top-0 h-full w-full  bg-linear-to-r from-transparent from-55% to-black'></div>
-          <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749657352/tyler_image_oyvoed.webp' alt="tylerImage" className='h-screen' />
+          <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/char-page/tyler/tyler_image.webp' alt="tylerImage" className='h-screen' />
         </div>
           <div className='h-full w-1/2 flex flex-col gap-5 font-barlow  justify-center'>
             <div className="font-bold ">

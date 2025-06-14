@@ -46,7 +46,7 @@ const Navcomp = ({isopen,setisopen}:{isopen:Boolean, setisopen: Dispatch<SetStat
                 exit={{x:"-100%"}}
                 transition={{duration:0.4, type:"tween"}}
             >
-              <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749654747/tyler_kma314.webp' alt="tyler" className='h-full object-cover grayscale brightness-70 blur-[0.05rem] ' />
+              <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/nav,%20profile/tyler.webp' alt="tyler" className='h-full object-cover grayscale brightness-70 blur-[0.05rem] ' />
             </motion.div>
             <motion.div 
                 className='h-full w-1/2 flex items-center bg-black'
@@ -54,7 +54,7 @@ const Navcomp = ({isopen,setisopen}:{isopen:Boolean, setisopen: Dispatch<SetStat
                 animate={{x:0}}
                 exit={{x:"100%"}}
                 transition={{ duration:0.4, type:"tween"}}>
-                <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749654747/narrator_sg0nxp.webp' alt="narrator" className='h-full object-cover grayscale' />
+                <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/nav,%20profile/narrator.webp' alt="narrator" className='h-full object-cover grayscale' />
                 <div className='absolute right-5 text-end flex flex-col md:text-5xl lg:text-6xl gap-5 font-tt'>
                 {
                     navLinks.map((nav)=>(

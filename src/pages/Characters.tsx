@@ -52,21 +52,21 @@ const Characters = () => {
       id:1,
       name:"Narrator",
       actor:"Edward Norton",
-      track:'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656645/char_narrator_pd6jhl.mp4',
+      track:'https://d3qw2mvgwe85u8.cloudfront.net/uploads/char-page/narrator/char_narrator.mp4',
       nav:"/narrator"
     },
     {
       id:2,
       name:"Tyler durden",
       actor:"Brad Pitt",
-      track:'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656484/char_tyler_ocngyk.mp4',
+      track:'https://d3qw2mvgwe85u8.cloudfront.net/uploads/char-page/tyler/char_tyler.mp4',
       nav:"/tylerdurden"
     },
     {
       id:3,
       name:"Marla singer",
       actor:"Helena Bonham Carter",
-      track:'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656695/char_marla_jvzpqi.mp4',
+      track:'https://d3qw2mvgwe85u8.cloudfront.net/uploads/char-page/marla/char_marla.mp4',
       nav:"/marlasinger"
     }
   ]

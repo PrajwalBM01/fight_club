@@ -123,7 +123,7 @@ const Story = () => {
           </motion.h1>
         </div>
         <video
-          src='https://res.cloudinary.com/df6rtyw66/video/upload/v1749634685/endShot_upslff.mp4' 
+          src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/endShot.mp4' 
           ref={endingRef} 
           loop 
           className='object-cover h-screen'/>
@@ -138,7 +138,7 @@ const Story = () => {
           <motion.div style={{x:xTransfrom}} className='flex'>
 
             <div ref={tylerRef} className='h-screen w-screen flex-shrink-0 bg-black flex items-center justify-center relative'>
-              <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635085/uktyler_nmijrg.webp' alt="YouKnowTyler" />
+              <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/uktyler.webp' alt="YouKnowTyler" />
               <motion.div style={{y:transfromYText}} className='absolute h-full w-full font-barlow font-bold text-5xl flex flex-col justify-center px-5'>
                 <h1>PEOPLE ALWAYS ASK ME</h1>
                 <h1 className='text-bloodRed'>IF I KNOW</h1>
@@ -148,7 +148,7 @@ const Story = () => {
 
             <div className='h-screen w-screen flex-shrink-0 bg-black flex items-center justify-center relative'>
               <img 
-                src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635192/insomnia_d1etw0.webp' 
+                src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/insomnia.webp' 
                 alt="insonimia" 
                 className='relative' />
               <div className='absolute  h-full w-full flex flex-col justify-center items-center gap-50'>
@@ -161,13 +161,13 @@ const Story = () => {
                 </motion.div>
               </div>
               <img 
-                src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635193/insomniaMask_yy5ki9.webp' 
+                src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/insomniaMask.webp' 
                 alt="insominaMask" 
                 className='absolute'/>
             </div>
 
             <div className='h-screen w-screen flex-shrink-0 bg-black flex items-center justify-center relative'>
-              <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635393/reserracted_ethh0i.webp' alt="reserrected" />
+              <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/reserracted.webp' alt="reserrected" />
               <div className='absolute h-full w-full flex items-center justify-center'>
                 <motion.h1 style={{x:reserctedText}} className='text-9xl z-10 font-grandmaster absolute text-bloodRed '>RESURRECTED</motion.h1>
                 <motion.h1 style={{x:reserctedText2}} className='text-9xl font-barlow font-bold'>RESURRECTED</motion.h1>
@@ -175,21 +175,21 @@ const Story = () => {
               <motion.div  className='text-neutral-500 absolute h-full w-full text-4xl font-barlow font-bold flex flex-col overflow-visible items-center justify-between py-10'>
                 <h1>EVERY EVENING I DIED. AND EVERY EVENING I WAS BORN AGAIN.</h1>
               </motion.div>
-              <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635364/reserractedMask_wq2efh.webp' alt="reserecctedMask" className='absolute' />
+              <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/reserractedMask.webp' alt="reserecctedMask" className='absolute' />
             </div>
 
             <div className='h-screen w-screen flex-shrink-0 overflow-hidden bg-black flex items-center justify-center relative'>
-              <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635468/slide_eamdol.webp' alt="slide" />
+              <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/slide.webp' alt="slide" />
               <motion.div style={{x:slideText}} className='absolute h-full w-full flex text-8xl overflow-hidden font-grandmaster justify-center items-center'>
                 {Array(20).fill(0).map((_, i) => (
                     <span key={i} className='text-8xl font-grandmaster px-4'>SLIDE</span>
                   ))}
               </motion.div>
-              <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635467/slideMask_mljs7c.webp' alt="slideMask" className='absolute' />
+              <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/slideMask.webp' alt="slideMask" className='absolute' />
             </div>
 
             <div className='h-screen w-screen flex-shrink-0 overflow-hidden bg-black flex items-center justify-center relative'>
-              <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635543/owninig_ij8ae5.webp' alt="owning" />
+              <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/owninig.webp' alt="owning" />
               <div className='absolute h-full w-full flex justify-between items-center px-5'>
                 <div className='flex flex-col items-start text-7xl font-barlow font-bold'>
                   <motion.h1 style={{x:owninigText}}>THINGS</motion.h1>
@@ -206,7 +206,7 @@ const Story = () => {
 
 
             <div className='h-screen w-screen flex-shrink-0 bg-black flex items-center justify-center relative'>
-              <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635655/dual_mkee6k.webp' alt="dual" />
+              <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/dual.webp' alt="dual" />
               <div className='absolute h-full w-full flex flex-col items-end py-20 text-5xl font-barlow font-bold'>
                 <motion.div style={{x:sittingText}} className='flex gap-2'>
                   <h1>HOW MUCH CAN YOU KNOW ABOUT</h1>
@@ -218,13 +218,13 @@ const Story = () => {
                   <h1 className='text-bloodRed'>FIGHT</h1>
                 </motion.div>
               </div>
-              <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635654/dualMask_yvef2o.webp' alt="dualMask" className='absolute' />
+              <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/dualMask.webp' alt="dualMask" className='absolute' />
             </div>
 
 
 
             <div className='h-screen w-screen flex-shrink-0 overflow-hidden bg-black flex items-center justify-center relative'>
-              <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749635950/whoYouAre_apufne.webp' alt="whoyouare" />
+              <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/whoYouAre.webp' alt="whoyouare" />
               <div className='absolute h-full w-full flex justify-between items-center px-5 '>
                 <motion.div style={{x:fctext}} className='font-barlow font-bold text-5xl '>
                   <h1>WHO</h1>
@@ -255,7 +255,7 @@ const Story = () => {
       </div>
       <motion.div ref={lastDivRef} className='h-screen w-full  flex items-center justify-center'>
         <div className='px-10'>
-          <video ref={speachRef} src='https://res.cloudinary.com/df6rtyw66/video/upload/v1749725139/speach_kxkoag.mp4' loop className=' rounded-3xl'/>
+          <video ref={speachRef} src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/speach.mp4' loop className=' rounded-3xl'/>
         </div>
       </motion.div> 
     </div>

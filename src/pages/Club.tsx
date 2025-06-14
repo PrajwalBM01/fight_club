@@ -27,15 +27,15 @@ const Club = () => {
   })
 
   const audioRolls:string[] = [
-    'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656058/welcomeTFC_gv5vlf.mp3',
-    'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656059/1rule_mxnslw.mp3',
-    'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656061/2rule_vs5rho.mp3',
-    'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656062/3rule_vywd8n.mp3',
-    'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656064/4rule_mozqfn.mp3',
-    'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656067/5rule_tusvdv.mp3',
-    'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656069/6rule_was5bl.mp3',
-    'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656070/7rule_vojug8.mp3',
-    'https://res.cloudinary.com/df6rtyw66/video/upload/v1749656058/8rule_flemo1.mp3'
+    'https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/welcomeTFC.mp3',
+    'https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/1rule.mp3',
+    'https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/2rule.mp3',
+    'https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/3rule.mp3',
+    'https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/4rule.mp3',
+    'https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/5rule.mp3',
+    'https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/6rule.mp3',
+    'https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/7rule.mp3',
+    'https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/8rule.mp3'
   ]
 
   useEffect(()=>{
@@ -96,7 +96,7 @@ const Club = () => {
       ))}
 
       <div className='h-screen snap-start relative font-bold font-barlow flex items-center '>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655296/welcome_xpcyaa.webp' alt="welcome" className='object-cover' />
+        <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/welcome.webp' alt="welcome" className='object-cover' />
         <motion.h1
           initial={{x:-800}} 
           animate={currentAudio==0? {x:0}:{x:-800}}
@@ -125,11 +125,11 @@ const Club = () => {
           className='absolute bottom-0 left-10 text-[12rem] z-5 font-fightclub font-thin text-bloodRed'
         >FIGHT CLUB
         </motion.h1>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655638/welcomeMask_ra9v0i.webp' alt="welcomMusk" className='absolute' />
+        <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/welcomeMask.webp' alt="welcomMusk" className='absolute' />
       </div>
 
       <div className='h-screen relative snap-start font-barlow flex items-center'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655301/1rule_snuiol.webp' alt="rule1" className='object-cover' />
+        <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/1rule.webp' alt="rule1" className='object-cover' />
         <div className=' absolute flex justify-end top-0 h-full w-full'>
           <div className=' text-end px-10 flex flex-col justify-center'>
           <motion.h1
@@ -179,7 +179,7 @@ const Club = () => {
       </div>
 
       <div className='h-screen relative font-barlow snap-start flex items-center'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655300/2rule_dgyqa3.webp' alt="rule2" className='object-cover' />  
+        <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/2rule.webp' alt="rule2" className='object-cover' />  
         <div className=' absolute flex justify-end top-0 h-full w-full'>
           <div className=' text-end px-10 flex flex-col justify-center'>
           <motion.h1
@@ -229,7 +229,7 @@ const Club = () => {
       </div>
 
       <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655303/3rule_hg4dy5.webp' alt="rule3" className='object-cover' />
+        <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/3rule.webp' alt="rule3" className='object-cover' />
         <div className='absolute top-0 h-full w-full flex justify-between'>
           <div className='px-5 flex flex-col justify-center'>
           <motion.h1
@@ -302,7 +302,7 @@ const Club = () => {
       </div>
 
       <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655293/4rule_asqq8x.webp' alt="rule4" className='object-cover' />
+        <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/4rule.webp' alt="rule4" className='object-cover' />
         <div className=' absolute top-0 h-full w-full flex justify-end items-end'>
           <div className=' w-full h-1/2 flex gap-10 items-center justify-center'>
           <motion.h1
@@ -335,7 +335,7 @@ const Club = () => {
       </div>
 
       <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655297/5rule_dhyu8k.webp' alt="rule5" className='object-cover' />
+        <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/5rule.webp' alt="rule5" className='object-cover' />
         <div className=' absolute top-0 h-full w-full flex justify-end items-end'>
           <div className=' w-full h-1/2 flex gap-10 items-center justify-center'>
             <motion.h1
@@ -373,7 +373,7 @@ const Club = () => {
       </div>
 
       <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
-      <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655294/6rule_nw9i5y.webp' alt="rule7" className='object-cover w-full'/>
+      <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/6rule.webp' alt="rule7" className='object-cover w-full'/>
         <div className=' absolute top-0 h-full w-full flex justify-center items-center'>
           <div className='h-full flex items-center flex-col justify-center'>
             <div className='flex'>
@@ -405,7 +405,7 @@ const Club = () => {
       </div>
 
       <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655298/7rule_zzwkkt.webp' alt="rule7" className='object-cover'/>  
+        <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/7rule.webp' alt="rule7" className='object-cover'/>  
         <div className='absolute flex justify-end flex-col top-0 h-full w-full'>
           <div className='flex flex-col justify-start px-5 py-5'>
             <div>
@@ -467,7 +467,7 @@ const Club = () => {
       </div>
 
       <div className='h-screen relative snap-start font-barlow font-bold flex items-center'>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655293/8rule_rl7da5.webp' alt="rule8" className='object-cover' />
+        <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/8rule.webp' alt="rule8" className='object-cover' />
         <div className=' absolute top-0 h-full w-full flex flex-col justify-end items-end'>
           <div className='w-full absolute top-80 flex gap-5 items-center justify-center'>
           <motion.h1
@@ -539,7 +539,7 @@ const Club = () => {
               className='text-[6rem] text-bloodRed font-fightclub font-thin'>FIGHT</motion.h1>
           </div>
         </div>
-        <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749655638/8ruleMask_pvsg6e.webp' alt="rule8mask" className='absolute object-cover' />
+        <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/rules/8ruleMask.webp' alt="rule8mask" className='absolute object-cover' />
       </div>
 
     </motion.div>

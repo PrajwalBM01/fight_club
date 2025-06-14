@@ -54,7 +54,7 @@ const App = () => {
 
   return isLoading? (
   <div className="h-screen w-full relative">
-    <img src='https://res.cloudinary.com/df6rtyw66/image/upload/v1749714169/loader_r4ccc1.webp' alt="loaderScreen" className="absolute bottom-0" />
+    <img src='https://d3qw2mvgwe85u8.cloudfront.net/uploads/app,%20story/loader.webp' alt="loaderScreen" className="absolute bottom-0" />
     <div className=" h-full w-full z-10 absolute flex justify-center font-barlow font-bold">
       <div className="w-full flex flex-col items-center m-8 ">
         <div className="lg:text-2xl text-neutral-200">For the best experience, please switch to full-screen mode by pressing F11 on Windows or the green maximize button on Mac.</div>
