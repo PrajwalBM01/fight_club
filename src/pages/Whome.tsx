@@ -41,7 +41,7 @@ const Whome = () => {
               <div className='flex gap-4'>
                 <a className='hover:text-white transition-colors' href="https://x.com/xshadowdev" target="_blank"><IconBrandTwitter size={20}/></a>
                 <a className='hover:text-white transition-colors' href="https://github.com/PrajwalBM01" target="_blank"><IconBrandGithub size={20}/></a>
-                <a className='hover:text-white transition-colors' href="https://www.linkedin.com/in/prajwal-bm-802196256/" target="_blank"><IconBrandLinkedin size={20}/></a>
+                <a className='hover:text-white transition-colors' href="https://www.linkedin.com/in/prajwalbm/" target="_blank"><IconBrandLinkedin size={20}/></a>
                 <a className='hover:text-white transition-colors' href="mailto:bmprajwaldvg@gmail.com" target="_blank"><IconMail size={20}/></a>
               </div>
             </div>
